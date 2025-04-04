@@ -268,8 +268,6 @@ when running scripts for testing etc - always print the time the script started 
 # write a script to get secrets for a scraper
 # maybe make it a vs code extension?
 
-personal token
-***REMOVED***
 
 vs code - ctrl p - collapse folders in explorer - yay
 ```
