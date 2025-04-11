@@ -26,9 +26,9 @@ fsi.AddPrinter<DateTimeOffset>(fun dt -> dt.ToString("O"))
 // tip: pin your nugets in .fsx to avoid being confused when you suddlenly get a never verion and sth doesn't work
 
 let s = p.WaitForXPathAsync("//a/span[contains(text(),'Payments')]/..", opt).Result
-	-> get nodes parent xpath
+    -> get nodes parent xpath
 s.GetPropertyAsync("tagName").Result
-	-> get tag name in pupeteer
+    -> get tag name in pupeteer
 
 ```
 
@@ -43,7 +43,7 @@ Run your app
 Stop-Transcript
 Get-content -tail 20 -wait path/to/file/here
 Get-EventLog application -Newest 1 | clip -> get stuff to clipboard awesome!
-	From <https://blogs.technet.microsoft.com/heyscriptingguy/2014/06/15/powertip-send-output-to-clipboard-with-powershell/>
+    From <https://blogs.technet.microsoft.com/heyscriptingguy/2014/06/15/powertip-send-output-to-clipboard-with-powershell/>
 ```
 
 # az keyvault
@@ -118,7 +118,7 @@ sudo docker run -p 8080:8080 acrinco.azurecr.io/it-metdesk-notificationreceiver:
     this is the one I used to start notification receiver on dmz linux
     Nginx forwards requests from 81 -> 0.0.0.0:8080
     -p host:container
-	Docker forwards requests from host:8080 -> container:8080
+    Docker forwards requests from host:8080 -> container:8080
 
 sudo docker pull acrinco.azurecr.io/it-wattsight-scraper:latest
 docker run -d -p 5432:5432 --name my-postgres -e POSTGRES_PASSWORD=mysecretpassword postgres
@@ -160,8 +160,8 @@ set statistics time off
 
 Win + shift + s -> print screen windows
 Windows terminal
-	Ctrl Shift T -> new tab
-	Ctrl Shift W -> close current tab
+    Ctrl Shift T -> new tab
+    Ctrl Shift W -> close current tab
 
 https://www.markdownguide.org/basic-syntax/
 
@@ -174,11 +174,11 @@ KeePass
 Excel
 Ctrl+[space] - select current cloumn
 Shift+[space] - select current row (space is long like a row)
-	Ctrl+"+" - insert a new column/row (first select column/row) (can be done with cumtiple columns)
-	Ctrl+- - delete column/row
+    Ctrl+"+" - insert a new column/row (first select column/row) (can be done with cumtiple columns)
+    Ctrl+- - delete column/row
 
 Ctrl+D - Fill down
-	Also double click with mouse
+    Also double click with mouse
 Ctrl+D - Get value from above
 Ctrl+R - Fill right
 Ctrl+` - Show formulas
@@ -206,50 +206,50 @@ Ctrl m o - collapse all to definition
 Ctrl m m - toggle fold current
 
 Vs code
-	https://code.visualstudio.com/docs/getstarted/keybindings
-	Ctrl+shift+space
+    https://code.visualstudio.com/docs/getstarted/keybindings
+    Ctrl+shift+space
 
-	code . -> run from console to open folder
-	code -> run from console
+    code . -> run from console to open folder
+    code -> run from console
 
-	Ctrl + P -> search for files
-	Ctrl + P -> Progra:20 -> go to 20th line
-	Ctrl + P -> Progra:@SomeMethod -> go to symbol
-	Ctrl + Shift + E -> Explorer (files)
-	Ctrl + Shift + G -> Git
-	Ctrl + Shift + F -> Find
-	Ctrl + K Ctrl + S -> Keyboard shortcuts
+    Ctrl + P -> search for files
+    Ctrl + P -> Progra:20 -> go to 20th line
+    Ctrl + P -> Progra:@SomeMethod -> go to symbol
+    Ctrl + Shift + E -> Explorer (files)
+    Ctrl + Shift + G -> Git
+    Ctrl + Shift + F -> Find
+    Ctrl + K Ctrl + S -> Keyboard shortcuts
 
-	Ctrl + N -> New file
-	Ctrl + Shift + N -> New window
-	Ctrl + Tab -> switch tabs
+    Ctrl + N -> New file
+    Ctrl + Shift + N -> New window
+    Ctrl + Tab -> switch tabs
 
-	Ctrl + S -> Save
-	Ctrl + Shift + S -> Save As
+    Ctrl + S -> Save
+    Ctrl + Shift + S -> Save As
 
-	Ctrl + W -> close window
+    Ctrl + W -> close window
 
-	Ctrl K I -> show symbol information
-	Ctrl Shift Space -> show symbol information
-	Alt + F12 - > peek definition
-	F2 -> rename (js)
-	Refactor
-		Select code and Ctrl .
-			Extract function
-			Extract constant
-	// @ts-check -> for .js files – enable type checking for just one file
+    Ctrl K I -> show symbol information
+    Ctrl Shift Space -> show symbol information
+    Alt + F12 - > peek definition
+    F2 -> rename (js)
+    Refactor
+        Select code and Ctrl .
+            Extract function
+            Extract constant
+    // @ts-check -> for .js files – enable type checking for just one file
 
     Ctrl+\ to split the active editor into two.
-	Ctrl+Shift+I -> insert date time now (Insert Date Time now extension)
-	Ctrl Shift Space -> show params
+    Ctrl+Shift+I -> insert date time now (Insert Date Time now extension)
+    Ctrl Shift Space -> show params
 
-	Ctrl Shift L -> select all occurrences of selected text
+    Ctrl Shift L -> select all occurrences of selected text
 
-	Selection
-		Shift + Alt + i -> add cursor to lines ends
+    Selection
+        Shift + Alt + i -> add cursor to lines ends
 
-	Extensions:
-		Rainbor CSV -> wow!
+    Extensions:
+        Rainbor CSV -> wow!
 
 
 https://superuser.com/questions/889414/force-refresh-re-scan-wireless-networks-from-command-line
@@ -262,9 +262,9 @@ https://cheatography.com/davechild/cheat-sheets/regular-expressions/
 markdown link [text](http://)
 
 when running scripts for testing etc - always print the time the script started running
-	and maybe include a timeout?
-	in case a script takes for ever to run, you're likely intereted in the results of several script runs
-	and you don't want to comeback next day seeing that a single script has been running for 30h and you still don't have any results
+    and maybe include a timeout?
+    in case a script takes for ever to run, you're likely intereted in the results of several script runs
+    and you don't want to comeback next day seeing that a single script has been running for 30h and you still don't have any results
 
 
 # write a script to get secrets for a scraper
