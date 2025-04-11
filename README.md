@@ -197,6 +197,8 @@ Select range before enetering data, Ctrl+[enter] - fill range with typed in valu
 
 Relitive references are visible in RC reference mode
 
+Libre calc
+    Shift + F7 - toggle spell check on/off
 
 Visual Studio
 Ctrl m l - expand all
