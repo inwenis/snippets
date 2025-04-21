@@ -70,17 +70,18 @@ az acr repository show --name acrinco --image it-wattsight-scraper-test:2
 ```
 
 # paket
-```
-https://github.com/settings/tokens
-https://incomas.slack.com/archives/CVC3V0J3B/p1644054708652069
-dotnet paket config add-token github_token token here
-dotnet paket config add-token github_token ***REMOVED***
+```PowerShell
+dotnet paket add Microsoft.AspNetCore.Http --project .\src\metdesk.scraper.fsproj # add package
+dotnet paket install                                                              # install packages
+
+# paket - github tokes
+# https://github.com/settings/tokens -> here you can generate tokes
+dotnet paket config add-token github_token ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# tokens are stored here
 C:\Users\fku\AppData\Roaming\Paket\paket.config
-dotnet paket add Microsoft.AspNetCore.Http --project .\src\metdesk.scraper.fsproj
-dotnet paket install # install packages
-## paket - install a github file
+
+# paket - install a github file
 Add file in paket.dependencies and paket.references
-dotnet tool install paket --add-source https://www.nuget.org/api/v2/
 ```
 
 # dotnet
