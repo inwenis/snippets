@@ -81,7 +81,12 @@ dotnet paket config add-token github_token ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 C:\Users\fku\AppData\Roaming\Paket\paket.config
 
 # paket - install a github file
+# https://fsprojects.github.io/Paket/github-dependencies.html
 Add file in paket.dependencies and paket.references
+# update github dependencies
+# --filter makes paket interpret <package id> as a regex
+dotnet paket update <package id> --filter
+dotnet paket update github       --filter
 ```
 
 # dotnet
