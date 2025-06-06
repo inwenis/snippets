@@ -37,10 +37,12 @@ s.GetPropertyAsync("tagName").Result
 Get-item "somefile.txt" | format-list show all properties of a object
 
 Invoke-WebRequest -Method 'POST' -Body '{"Command":"\"C:/Program Files/R/R-3.5.3/bin/Rscript.exe\" C:/Services/Code/ScEntsoE_IE_SQL_DA_Price.R","Timeout":20}' -Uri "http://localhost:4000/execute" -ContentType "application/json" -UseBasicParsing
-Powershell tee output to a file but preserve colors in console
+
+# Powershell tee output to a file but preserve colors in console
 Start-Transcript out.log
-Run your app
+# Run your app here
 Stop-Transcript
+
 Get-content -tail 20 -wait path/to/file/here
 Get-EventLog application -Newest 1 | clip -> get stuff to clipboard awesome!
     From <https://blogs.technet.microsoft.com/heyscriptingguy/2014/06/15/powertip-send-output-to-clipboard-with-powershell/>
