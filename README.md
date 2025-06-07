@@ -61,7 +61,6 @@ az keyvault secret show --vault-name "kv-it-data-capt-scraper" --name "tennet-pr
 az keyvault secret set  --vault-name "kv-it-data-capt-scraper" --name "rnp-certificate-incommodities-ws3" --file "C:\Users\fku\Downloads\certAndKey.pem"
 az keyvault secret set  --vault-name "kv-it-data-capt-scraper" --name "argusFtpPassword" --value "..."
 az keyvault secret delete --vault-name "kv-it-data-capt-scraper" --name "argus-ftp-username"
-az keyvault secret delete --vault-name "kv-it-data-capt-scraper" --name "tennet-production-api-key"
 ```
 
 # az acr - Azure Container Registry
