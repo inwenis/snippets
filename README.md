@@ -45,7 +45,7 @@ Stop-Transcript
 
 Get-content -tail 20 -wait path/to/file/here
 Get-EventLog application -Newest 1 | clip -> get stuff to clipboard awesome!
-    From <https://blogs.technet.microsoft.com/heyscriptingguy/2014/06/15/powertip-send-output-to-clipboard-with-powershell/>
+# source: https://blogs.technet.microsoft.com/heyscriptingguy/2014/06/15/powertip-send-output-to-clipboard-with-powershell/
 ```
 
 # az keyvault
@@ -164,55 +164,53 @@ set statistics time on
 -- Query 2 goes here
 set statistics time off
 
-
 Win + shift + s -> print screen windows
+
 Windows terminal
     Ctrl Shift T -> new tab
     Ctrl Shift W -> close current tab
 
-https://www.markdownguide.org/basic-syntax/
-
 Notable
-  Ctrl Shift X - change folder
+    Ctrl Shift X - change folder
 
 KeePass
-  Ctrl Alt D - auto type
+    Ctrl Alt D - auto type
 
 Excel
-Ctrl+[space] - select current column
-Shift+[space] - select current row (space is long like a row)
-    Ctrl+"+" - insert a new column/row (first select column/row) (can be done with multiple columns)
-    Ctrl+- - delete column/row
+    Ctrl+[space] - select current column
+    Shift+[space] - select current row (space is long like a row)
+        Ctrl+"+" - insert a new column/row (first select column/row) (can be done with multiple columns)
+        Ctrl+- - delete column/row
 
-Ctrl+D - Fill down
-    Also double click with mouse
-Ctrl+D - Get value from above
-Ctrl+R - Fill right
-Ctrl+` - Show formulas
-F4 - Anchor cell reference
-Ctrl+A - select current table
-Ctrl+; - Today
+    Ctrl+D - Fill down
+        Also double click with mouse
+    Ctrl+D - Get value from above
+    Ctrl+R - Fill right
+    Ctrl+` - Show formulas
+    F4 - Anchor cell reference
+    Ctrl+A - select current table
+    Ctrl+; - Today
 
-Headers - middle aligned
+    Headers - middle aligned
 
-& - concat text in excel
+    & - concat text in excel
 
-Select many columns, double click to autofit width all
-Select many columns, set width for one column - sets same width on all
-Select range before entering data, [enter] moves to next available cell
-Select range before entering data, Ctrl+[enter] - fill range with typed in value
+    Select many columns, double click to autofit width all
+    Select many columns, set width for one column - sets same width on all
+    Select range before entering data, [enter] moves to next available cell
+    Select range before entering data, Ctrl+[enter] - fill range with typed in value
 
-Relative references are visible in RC reference mode
+    Relative references are visible in RC reference mode
 
 Libre calc
     Shift + F7 - toggle spell check on/off
 
 Visual Studio
-Ctrl m l - expand all
-Ctrl m o - collapse all to definition
-Ctrl m m - toggle fold current
+    Ctrl m l - expand all
+    Ctrl m o - collapse all to definition
+    Ctrl m m - toggle fold current
 
-Vs code
+code
     https://code.visualstudio.com/docs/getstarted/keybindings
     Ctrl+shift+space
 
@@ -255,16 +253,17 @@ Vs code
     Selection
         Shift + Alt + i -> add cursor to lines ends
 
+    ctrl p - collapse folders in explorer - yay
+
     Extensions:
         Rainbow CSV -> wow!
-
 
 https://superuser.com/questions/889414/force-refresh-re-scan-wireless-networks-from-command-line
 Wlan wifi refresh rescan
 
 https://cheatography.com/davechild/cheat-sheets/regular-expressions/
 
-
+https://www.markdownguide.org/basic-syntax/
 
 markdown link [text](http://)
 
@@ -272,11 +271,4 @@ when running scripts for testing etc - always print the time the script started 
     and maybe include a timeout?
     in case a script takes for ever to run, you're likely interested in the results of several script runs
     and you don't want to comeback next day seeing that a single script has been running for 30h and you still don't have any results
-
-
-# write a script to get secrets for a scraper
-# maybe make it a vs code extension?
-
-
-vs code - ctrl p - collapse folders in explorer - yay
 ```
