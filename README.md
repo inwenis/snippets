@@ -23,12 +23,12 @@ let n = 1_000_000
 printfn $"{n:N0}" // 1,000,000
 fsi.AddPrinter<DateTimeOffset>(fun dt -> dt.ToString("O"))
 
-// tip: pin your nugets in .fsx to avoid being confused when you suddlenly get a never verion and sth doesn't work
+// tip: pin your nugets in .fsx to avoid being confused when you suddenly get a never version and sth doesn't work
 
 let s = p.WaitForXPathAsync("//a/span[contains(text(),'Payments')]/..", opt).Result
     -> get nodes parent xpath
 s.GetPropertyAsync("tagName").Result
-    -> get tag name in pupeteer
+    -> get tag name in puppeteer
 
 ```
 
@@ -180,9 +180,9 @@ KeePass
   Ctrl Alt D - auto type
 
 Excel
-Ctrl+[space] - select current cloumn
+Ctrl+[space] - select current column
 Shift+[space] - select current row (space is long like a row)
-    Ctrl+"+" - insert a new column/row (first select column/row) (can be done with cumtiple columns)
+    Ctrl+"+" - insert a new column/row (first select column/row) (can be done with multiple columns)
     Ctrl+- - delete column/row
 
 Ctrl+D - Fill down
@@ -200,10 +200,10 @@ Headers - middle aligned
 
 Select many columns, double click to autofit width all
 Select many columns, set width for one column - sets same width on all
-Select range before enetering data, [enter] moves to next avaiable cell
-Select range before enetering data, Ctrl+[enter] - fill range with typed in value
+Select range before entering data, [enter] moves to next available cell
+Select range before entering data, Ctrl+[enter] - fill range with typed in value
 
-Relitive references are visible in RC reference mode
+Relative references are visible in RC reference mode
 
 Libre calc
     Shift + F7 - toggle spell check on/off
@@ -221,8 +221,8 @@ Vs code
     code -> run from console
 
     Ctrl + P -> search for files
-    Ctrl + P -> Progra:20 -> go to 20th line
-    Ctrl + P -> Progra:@SomeMethod -> go to symbol
+    Ctrl + P -> Program:20 -> go to 20th line
+    Ctrl + P -> Program:@SomeMethod -> go to symbol
     Ctrl + Shift + E -> Explorer (files)
     Ctrl + Shift + G -> Git
     Ctrl + Shift + F -> Find
@@ -257,7 +257,7 @@ Vs code
         Shift + Alt + i -> add cursor to lines ends
 
     Extensions:
-        Rainbor CSV -> wow!
+        Rainbow CSV -> wow!
 
 
 https://superuser.com/questions/889414/force-refresh-re-scan-wireless-networks-from-command-line
@@ -271,7 +271,7 @@ markdown link [text](http://)
 
 when running scripts for testing etc - always print the time the script started running
     and maybe include a timeout?
-    in case a script takes for ever to run, you're likely intereted in the results of several script runs
+    in case a script takes for ever to run, you're likely interested in the results of several script runs
     and you don't want to comeback next day seeing that a single script has been running for 30h and you still don't have any results
 
 
