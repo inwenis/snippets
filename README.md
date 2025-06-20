@@ -210,6 +210,4 @@ when running scripts for testing etc - always print the time the script started 
     and maybe include a timeout?
     in case a script takes for ever to run, you're likely interested in the results of several script runs
     and you don't want to comeback next day seeing that a single script has been running for 30h and you still don't have any results
-
-
 ```
