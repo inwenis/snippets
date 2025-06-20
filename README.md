@@ -36,8 +36,6 @@ s.GetPropertyAsync("tagName").Result
 ```powershell
 Get-item "somefile.txt" | format-list show all properties of a object
 
-Invoke-WebRequest -Method 'POST' -Body '{"Command":"\"C:/Program Files/R/R-3.5.3/bin/Rscript.exe\" C:/Services/Code/ScEntsoE_IE_SQL_DA_Price.R","Timeout":20}' -Uri "http://localhost:4000/execute" -ContentType "application/json" -UseBasicParsing
-
 # Powershell tee output to a file but preserve colors in console
 Start-Transcript out.log
 # Run your app here
@@ -48,38 +46,16 @@ Get-EventLog application -Newest 1 | clip -> get stuff to clipboard awesome!
 # source: https://blogs.technet.microsoft.com/heyscriptingguy/2014/06/15/powertip-send-output-to-clipboard-with-powershell/
 ```
 
-# az keyvault
-```powershell
-az keyvault secret list
-az keyvault secret list --vault-name "kv-it-shared-scraper"
-az keyvault secret list --vault-name "kv-it-data-collection"
-
-# IT.DataCapture key vault
-az keyvault secret list --vault-name "kv-it-data-capt-scraper"
-az keyvault secret show --vault-name "kv-it-data-capt-scraper" --name "tennet-production-api-key"
-
-az keyvault secret set  --vault-name "kv-it-data-capt-scraper" --name "rnp-certificate-incommodities-ws3" --file "C:\Users\fku\Downloads\certAndKey.pem"
-az keyvault secret set  --vault-name "kv-it-data-capt-scraper" --name "argusFtpPassword" --value "..."
-az keyvault secret delete --vault-name "kv-it-data-capt-scraper" --name "argus-ftp-username"
-```
-
-# az acr - Azure Container Registry
-```powershell
-az acr repository list --name acrinco --output table # List docker images from Azure
-az acr repository show-tags --name acrinco --repository it-wattsight-scraper-test --output table # List tags
-az acr repository show --name acrinco --image it-wattsight-scraper-test:2
-```
-
 # paket
 ```PowerShell
-dotnet paket add Microsoft.AspNetCore.Http --project .\src\metdesk.scraper.fsproj # add package
-dotnet paket install                                                              # install packages
+dotnet paket add Microsoft.AspNetCore.Http --project .\src\proj.fsproj # add package
+dotnet paket install                                                   # install packages
 
 # paket - github tokes
 # https://github.com/settings/tokens -> here you can generate tokes
 dotnet paket config add-token github_token ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 # tokens are stored here
-C:\Users\fku\AppData\Roaming\Paket\paket.config
+C:\Users\inwen\AppData\Roaming\Paket\paket.config
 
 # paket - install a github file
 # https://fsprojects.github.io/Paket/github-dependencies.html
@@ -90,74 +66,37 @@ dotnet paket update <package id> --filter
 dotnet paket update github       --filter
 ```
 
-# dotnet
-```
-dotnet publish ./IT.Curvie/IT.Curvie.fsproj --framework net6.0 --self-contained --runtime win-x64 -c Release -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -o release_here
-dotnet publish -p:PublishSingleFile=true --runtime linux-x64 --self-contained true -c Release
-```
-
 # docker
 ```
-docker build --build-arg GITHUB_TOKEN=***REMOVED*** .
-docker build --build-arg GITHUB_TOKEN=***REMOVED*** -t test .
+docker build --build-arg ARG_NAME=value .
+docker build --build-arg ARG_NAME=value -t tagGoesHere .
 
 docker images
 docker stop
 docker restart
 docker container ls = docker ps
-docker logs a5 -> show logs
+docker logs a5 -> show logs from container a5...
 
 docker run -it -p 8080:8080 myapp:tag1
-docker run -it --entrypoint sh acrinco.azurecr.io/it-metdesk:latest
-docker run -it --env-file c:/stuff/env.txt metdesk.scraper:latest
+docker run -it --entrypoint sh container-reg/name:latest
+docker run -it --env-file c:/stuff/env.txt name:latest
     File looks like this:3
-        Secrets__kyosApiKey=123
-        SECRETS__KYOSAPIKEY=123
-        SECRETS__SQLPASSWORD=123
-        SECRETS__TEREGAPASSWORD=123
-        SECRETS__TEREGAUSERNAME=123
-        SECRETS__UIOLIPASSWORD=123
-        SECRETS__UIOLIUSERNAME=123
+        env_var_name=123
+        env_var_name=123
+        env_var_name=123
+        env_var_name=123
+        env_var_name=123
+        env_var_name=123
+        env_var_name=123
 
-sudo docker run --env-file ./env.txt acrinco.azurecr.io/it-wattsight-scraper:164 > out.log &
-sudo docker run --env-file ./env.txt -it --entrypoint sh acrinco.azurecr.io/it-wattsight-scraper:165
-sudo docker run -p 8080:8080 acrinco.azurecr.io/it-metdesk-notificationreceiver:latest &
-    this is the one I used to start notification receiver on dmz linux
-    Nginx forwards requests from 81 -> 0.0.0.0:8080
-    -p host:container
+docker run -p 8080:8080 ...
     Docker forwards requests from host:8080 -> container:8080
 
-sudo docker pull acrinco.azurecr.io/it-wattsight-scraper:latest
 docker run -d -p 5432:5432 --name my-postgres -e POSTGRES_PASSWORD=mysecretpassword postgres
-```
-
-# npm
-```powershell
-npm update @incom/js-scrapers-sdk
-npm i github:@incomas/it.jsscraperssdk
-npm i github:@incomas/it.jsscraperssdk -S # save
-```
-
-# kubectl
-```
-kubectl logs -l app=it-scheduler --tail=-1 > out
-kubectl get namespace – list namespaces
-kubectl config get-contexts
-kubectl config use-context it-prod-aks
-kubectl get services
-kubectl get pods
-kubectl logs it-pointconnect-5fc88db44f-9nbzh –n pointconnect    -n <->
-kubectl logs -l app=it-continuousdatacapture
-Deployment in kubectl -> that is the service
-Service in kubectl -> service endpoint exposed on network
-kubectl logs continuousdatacapture-84cd5756f5-tb5g9 -n data-collection > out.logs
 ```
 
 # misc
 ```
-Azure Data Studio
-    Shift+Win+R - close/open results pane
-
 SQL
 set statistics time on
 -- Query 1 goes here
@@ -272,7 +211,5 @@ when running scripts for testing etc - always print the time the script started 
     in case a script takes for ever to run, you're likely interested in the results of several script runs
     and you don't want to comeback next day seeing that a single script has been running for 30h and you still don't have any results
 
-conda remove -n QF.Scrapers.SFTP --all
-poetry add sdclib --source datacollection
 
 ```
