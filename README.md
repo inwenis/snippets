@@ -95,6 +95,20 @@ docker run -p 8080:8080 ...
 docker run -d -p 5432:5432 --name my-postgres -e POSTGRES_PASSWORD=mysecretpassword postgres
 ```
 
+# git
+```
+git diff master...feature - show what feature has added since it branched of from master
+=
+git diff $(git merge-base master feature) feature
+  git diff <commit>...<commit> - any of <commit> can be omitted and will be replaced by HEAD
+    git diff master...feature
+    =
+    git checkout master
+    git diff ...feature
+    https://git-scm.com/docs/git-diff#Documentation/git-diff.txt-gitdiffoptionscommitcommit--path-1
+```
+
+
 # misc
 ```
 SQL
