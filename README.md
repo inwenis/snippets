@@ -225,3 +225,17 @@ when running scripts for testing etc - always print the time the script started 
     in case a script takes for ever to run, you're likely interested in the results of several script runs
     and you don't want to comeback next day seeing that a single script has been running for 30h and you still don't have any results
 ```
+
+# Python
+```python
+z = [1] * 5      # [1, 1, 1, 1, 1]
+e = enumerate(z)
+list(e)          # [(0, 1), (1, 1), (2, 1), (3, 1), (4, 1)]
+
+# remember that if you exhaust the iterator in `e` without assigning the elements into a list
+# you will not be able to iterate over it again
+e = enumerate(z)
+[print(x) for x in e] # prints [(0, 1), (1, 1), (2, 1), (3, 1), (4, 1)]
+[print(x) for x in e] # prints nothing
+
+```
