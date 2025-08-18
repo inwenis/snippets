@@ -238,4 +238,13 @@ e = enumerate(z)
 [print(x) for x in e] # prints [(0, 1), (1, 1), (2, 1), (3, 1), (4, 1)]
 [print(x) for x in e] # prints nothing
 
+# read all text
+with open('filename.txt', 'r', encoding='utf-8') as f:
+    content = f.read()
+# with does not introduce a new scope in python
+print(content)
+
+# read all text with pathlib
+from pathlib import Path
+content = Path(f"path/to/{file_name}").read_text()
 ```
