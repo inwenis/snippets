@@ -30,6 +30,9 @@ let s = p.WaitForXPathAsync("//a/span[contains(text(),'Payments')]/..", opt).Res
 s.GetPropertyAsync("tagName").Result
     -> get tag name in puppeteer
 
+type ThisWillBeAClass() =
+    member this.GetOnlyProperty = 123
+
 ```
 
 # PowerShell
