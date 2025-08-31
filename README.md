@@ -35,6 +35,23 @@ type ThisWillBeAClass() =
 
 ```
 
+```fs
+module TopLevelModule // top level module needs no = sign
+// modules become static classes (sealed classes with private constructors)
+
+let topLevelModuleFun () = ... // no need for indentations here :)
+
+module NestedModule =
+    let nestedModuleFun () = ...
+```
+
+```fs
+namespace TopLevel
+
+module ModuleName =
+    let moduleFun () = ... // we need indentations here since we started with a namespace
+```
+
 # PowerShell
 ```powershell
 Get-item "somefile.txt" | format-list show all properties of a object
