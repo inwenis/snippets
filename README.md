@@ -52,6 +52,19 @@ module ModuleName =
     let moduleFun () = ... // we need indentations here since we started with a namespace
 ```
 
+```fs
+// paket
+
+// ^-paket.dependencies
+// ^-paket.lock
+// ^-proj folder A
+//     ^-paket.references
+// ^-proj folder B
+//     ^-paket.references
+
+// I have experienced issues with paket when paket.references was in the same dir as paket.dependencies and paket.lock
+```
+
 # PowerShell
 ```powershell
 Get-item "somefile.txt" | format-list show all properties of a object
