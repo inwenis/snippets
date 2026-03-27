@@ -100,7 +100,7 @@ dotnet paket update github       --filter
 ```
 
 # docker
-```
+```shell
 docker build --build-arg ARG_NAME=value .
 docker build --build-arg ARG_NAME=value -t tagGoesHere .
 
@@ -126,6 +126,10 @@ docker run -p 8080:8080 ...
     Docker forwards requests from host:8080 -> container:8080
 
 docker run -d -p 5432:5432 --name my-postgres -e POSTGRES_PASSWORD=mysecretpassword postgres
+
+# https://stackoverflow.com/a/45359452/2377787
+# delete stopped containers
+docker container prune
 ```
 
 # git
