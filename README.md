@@ -199,55 +199,57 @@ Visual Studio
     Ctrl m l - expand all
     Ctrl m o - collapse all to definition
     Ctrl m m - toggle fold current
+```
 
-code
-    https://code.visualstudio.com/docs/getstarted/keybindings
-    Ctrl+shift+space
+# code
+```
+https://code.visualstudio.com/docs/getstarted/keybindings
+Ctrl+shift+space
 
-    code . -> run from console to open folder
-    code -> run from console
+code . -> run from console to open folder
+code -> run from console
 
-    Ctrl + P -> search for files
-    Ctrl + P -> Program:20 -> go to 20th line
-    Ctrl + P -> Program:@SomeMethod -> go to symbol
-    Ctrl + Shift + E -> Explorer (files)
-    Ctrl + Shift + G -> Git
-    Ctrl + Shift + F -> Find
-    Ctrl + K Ctrl + S -> Keyboard shortcuts
+Ctrl + P          -> search for files
+Ctrl + P          -> Program:20 -> go to 20th line
+Ctrl + P          -> Program:@SomeMethod -> go to symbol
+Ctrl + Shift + E  -> Explorer (files)
+Ctrl + Shift + G  -> Git
+Ctrl + Shift + F  -> Find
+Ctrl + K Ctrl + S -> Keyboard shortcuts
+Ctrl + N          -> New file
+Ctrl + Shift + N  -> New window
+Ctrl + Tab        -> switch tabs
+Ctrl + S          -> Save
+Ctrl + Shift + S  -> Save As
+Ctrl + W          -> close window
+Ctrl K I          -> show symbol information
+Ctrl Shift Space  -> show symbol information
+Ctrl Shift Space  -> show params
 
-    Ctrl + N -> New file
-    Ctrl + Shift + N -> New window
-    Ctrl + Tab -> switch tabs
+Ctrl + \          -> to split the active editor into two.
+Ctrl+Shift+I      -> insert date time now (Insert Date Time now extension)
+Ctrl Shift L      -> select all occurrences of selected text
 
-    Ctrl + S -> Save
-    Ctrl + Shift + S -> Save As
+Selection
+    Shift + Alt + i -> add cursor to lines ends
 
-    Ctrl + W -> close window
+ctrl + p - collapse folders in explorer - yay
 
-    Ctrl K I -> show symbol information
-    Ctrl Shift Space -> show symbol information
-    Alt + F12 - > peek definition
-    F2 -> rename (js)
-    Refactor
-        Select code and Ctrl .
-            Extract function
-            Extract constant
-    // @ts-check -> for .js files – enable type checking for just one file
+Alt + F12 - > peek definition
+F2 -> rename (js)
+Refactor
+    Select code and Ctrl .
+        Extract function
+        Extract constant
+// @ts-check -> for .js files – enable type checking for just one file
 
-    Ctrl+\ to split the active editor into two.
-    Ctrl+Shift+I -> insert date time now (Insert Date Time now extension)
-    Ctrl Shift Space -> show params
 
-    Ctrl Shift L -> select all occurrences of selected text
 
-    Selection
-        Shift + Alt + i -> add cursor to lines ends
+Extensions:
+    Rainbow CSV -> wow!
+```
 
-    ctrl p - collapse folders in explorer - yay
-
-    Extensions:
-        Rainbow CSV -> wow!
-
+```
 https://superuser.com/questions/889414/force-refresh-re-scan-wireless-networks-from-command-line
 Wlan wifi refresh rescan
 
