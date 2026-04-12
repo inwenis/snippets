@@ -199,6 +199,10 @@ Visual Studio
     Ctrl m l - expand all
     Ctrl m o - collapse all to definition
     Ctrl m m - toggle fold current
+
+Chat GPT web
+    Ctrl + \         - show shortcuts
+    Ctrl + Shift + O - new conversation
 ```
 
 # code
