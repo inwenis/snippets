@@ -294,7 +294,7 @@ content = Path(f"path/to/{file_name}").read_text()
 
 # agents
 ```
-before fixing something - write a failing test.
+before coding something write a failing test first.
 
 plan the script app in stages - a dummy mvp, add features to peaces, polish, etc. code each step, test that it works, move to next step, repeat untill app is ready, git commit at every step
 
