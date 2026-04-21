@@ -291,3 +291,36 @@ print(content)
 from pathlib import Path
 content = Path(f"path/to/{file_name}").read_text()
 ```
+
+# agents
+```
+before fixing something - write a failing test.
+
+plan the script app in stages - a dummy mvp, add features to peaces, polish, etc. code each step, test that it works, move to next step, repeat untill app is ready, git commit at every step
+
+if parts of sytem can be coded in parallel - use subagnets and git worktrees
+if adding a feature needs the code to be refactored - refactor first in separate pr, then add feature in pr on top
+
+in the code split pure code from side effects
+do not invent use cases and do not code defensively, if it breaks we will fix it then
+
+the app should dump logs so if it fails we can investigae what happend
+
+when running the app should give live progress to the user so i know it's running and it didn't hang
+when running the app live it should give user friendly output
+there should be an option to give ai agent friendly output
+
+
+code priorities:
+- redable
+- clean
+- simple
+- robust
+- performace is the last concern
+
+create a local git repo
+
+in the main dir there should be a build.sh, run.sh, test.sh script <- the function in self explanatory
+
+when writing docs be short, prefer lists and points over prose. pragmatic over polished
+```
