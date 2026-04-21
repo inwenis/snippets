@@ -318,6 +318,8 @@ code priorities:
 - robust
 - performace is the last concern
 
+prefer using modules/libraries/packages to writing code yourself
+
 create a local git repo
 
 in the main dir there should be a build.sh, run.sh, test.sh script <- the function in self explanatory
