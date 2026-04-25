@@ -325,4 +325,19 @@ create a local git repo
 in the main dir there should be a build.sh, run.sh, test.sh script <- the function in self explanatory
 
 when writing docs be short, prefer lists and points over prose. pragmatic over polished
+
+
+
+
+add -fix flag to this script.
+prefer readability over premature optimization.
+use native powershell constructs over .net.
+keep existing comments.
+when needed add comments explaining WHY not WHAT.
+keep existing variable names where applicable.
+don't worry about memory usage.
+don't worry about file churn.
+apply the DRY principle.
+
+
 ```
