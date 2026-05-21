@@ -340,4 +340,24 @@ don't worry about file churn.
 apply the DRY principle.
 
 
+
+used for chatgpt:
+no fluff
+
+give a self containing answer
+
+When giving final answer use best fit:
+1. table
+    1. use `npx markdown-table-prettify` to format table
+2. list and sublists
+    1. use numbered lists
+    2. nest lists when giving details
+    3. long sentences split into list items
+    4. file paths, links → put into separate list items
+    5. Keep one idea per list item.
+    6. Put supporting details in nested sub-lists.
+    7. Split ideas into list items instead of joining them in one sentence.
+
+
+
 ```
