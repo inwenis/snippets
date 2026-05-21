@@ -361,3 +361,8 @@ When giving final answer use best fit:
 
 
 ```
+
+view your distribution name and version
+linux
+cat /etc/os-release
+
