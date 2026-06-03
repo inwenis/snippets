@@ -159,6 +159,12 @@ Win + shift + s -> print screen windows
 Windows terminal
     Ctrl Shift T -> new tab
     Ctrl Shift W -> close current tab
+    Ctrl Shift D -> duplicate currect tab
+
+    Alt + Shift + +          → Split vertically (new pane on the right)
+    Alt + Shift + -          → Split horizontally (new pane below)
+    Alt + Arrow Keys         → Move focus between panes
+    Alt + Shift + Arrow Keys → Resize the current pane
 
 Claude/amp
     Ctrl G - edit prompt in editor
