@@ -160,6 +160,9 @@ Windows terminal
     Ctrl Shift T -> new tab
     Ctrl Shift W -> close current tab
 
+Claude/amp
+    Ctrl G - edit prompt in editor
+
 Notable
     Ctrl Shift X - change folder
 
