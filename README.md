@@ -372,6 +372,8 @@ When giving final answer use best fit:
 “Before changing the production code, create a minimal way to observe the current behaviour. Prefer executable evidence over reasoning. You may create temporary scripts, temporary logging, temporary assertions, or temporary instrumentation. Remove them before the final patch unless they are useful permanent tests.”
 
 
+fix review findings that improve code quality, KISS, do not code deefensively against theoretical issues
+
 ```
 
 view your distribution name and version
