@@ -210,7 +210,7 @@ Visual Studio
     Ctrl m m - toggle fold current
 
 Chat GPT web
-    Ctrl + \         - show shortcuts
+    Ctrl + /         - show shortcuts
     Ctrl + Shift + O - new conversation
 ```
 
