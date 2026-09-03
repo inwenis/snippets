@@ -356,6 +356,10 @@ used for chatgpt:
 no fluff
 
 give a self containing answer
+explain assuming i have 0 context
+
+Explain in one sentence, then in two sentences, then in four sentences, then in eight sentences
+
 
 When giving final answer use best fit:
 1. table
@@ -379,6 +383,7 @@ fix review findings that improve:
 - code quality
 - KISS
 - do not code defensively against theoretical issues
+
 
 ```
 
