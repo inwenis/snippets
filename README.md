@@ -385,6 +385,52 @@ fix review findings that improve:
 - do not code defensively against theoretical issues
 
 
+# building
+- default to MVP → smallest thing that works
+- no speculative edge cases, abstractions, config options, or new dependencies
+- every changed line must trace to the request
+- wrote 200 lines where 50 would do → rewrite as 50
+- grep for an existing helper before writing a new one
+- non-trivial task → give a 3-sentence plan before coding
+
+# fail loud
+- no catch-and-continue, no silent fallbacks, no default values on error
+- crash + log with context → failures must be visible in production
+- guard at trust boundaries only, not inside trusted internal code
+
+# never skip, even for MVP
+- auth and permissions
+- db schema and migrations
+- deleting or overwriting data
+- secrets
+- input from outside the system
+- money
+
+# review
+- review the plan and the never-skip list → no polish review
+- every finding needs a concrete failing scenario → prove it or discard it
+- do not flag: style, speculative risk, unchanged code, feature requests
+- target ≤ 2 findings per review → signal over volume
+
+# upkeep
+- rule that a linter or test can enforce → put it there, not in this file
+- recurring cleanup → dead code, duplicate helpers, stale docs, as small PRs
+- prune stale rules from this file → keep it short
+
+2. Why each section earns its place
+   a. building → agents over-build because "looks done" is their only stop signal. A concrete number (200 → 50) beats a vague "keep it simple".
+   b. fail loud → makes "fix what I see fail in production" actually work. Swallowed exceptions hide the signal.
+   c. never skip → the failures that never crash (leaks, data loss). Same list the risk-triage teams use.
+   d. review → Cloudflare's finding: telling the reviewer what NOT to flag mattered most.
+   e. upkeep → SlopCodeBench showed prompt rules fade after the first iteration. Linters and scheduled cleanup do not fade.
+3. Overlap warning
+   a. Your ponytail plugin already covers most of building and part of never skip.
+   b. Net-new for you → fail loud, review, upkeep.
+   c. Want it leaner → paste only those three sections.
+4. Target file
+   a. C:\Users\inwen\.codex\AGENTS.md
+   b. Say the word → I add it there.
+
 ```
 
 view your distribution name and version
